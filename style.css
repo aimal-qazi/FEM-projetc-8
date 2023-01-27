@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  background: #fff;
+}
+.navList {
+  display: flex;
+  list-style: none;
+  z-index: 100;
+}
+nav .bx-menu {
+  font-size: 32px;
+  display: none;
+  z-index: 100;
+}
+.navList li a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  z-index: 100;
+}
+.navList li a:hover {
+  color: hsl(136, 65%, 51%);
+  transition: 0.4s;
+}
+nav .reg {
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  font-weight: 600;
+  color: #fff;
+  z-index: 100;
+  border: none;
+  outline: none;
+  transition: all 0.4s ease;
+}
+nav .reg:hover {
+  background: linear-gradient(to right, hsl(136, 65%, 80%), hsl(192, 70%, 70%));
+  transition: 0.4s;
+}
+@media (max-width: 880px) {
+  nav .reg {
+    display: none;
+  }
+}
+
+@media (max-width: 725px) {
+  nav {
+    padding: 10px 30px;
+  }
+  nav .bx-menu {
+    display: initial;
+    cursor: pointer;
+  }
+  .navList {
+    position: fixed;
+    top: -460px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #777;
+    border-radius: 0 0 10px 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .navList.open {
+    top: 72px;
+    transition: 0.6s;
+  }
+  .navList li a {
+    color: #111;
+    padding: 20px 0;
+    display: inline-block;
+  }
+}
+
+/* Header Styling Started */
+header .wrapper {
+  z-index: -1;
+}
+header .wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 30px 0 30px;
+}
+header .wrapper .left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 80px;
+  padding-top: 80px;
+}
+header .wrapper .left h1 {
+  font-weight: 300;
+  font-size: 60px;
+  color: hsl(233, 26%, 24%);
+}
+header .wrapper .left p {
+  margin-top: 20px;
+  width: 67%;
+  color: hsl(233, 8%, 62%);
+}
+header .wrapper .left button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 30px;
+  background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+}
+header .wrapper .left button:hover {
+  background: linear-gradient(to right, hsl(136, 65%, 80%), hsl(192, 70%, 70%));
+  transition: 0.4s;
+}
+header .wrapper .right {
+  width: 55%;
+  background-image: url(images/bg-intro-desktop.svg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+header .wrapper .right img {
+  width: 70%;
+  min-height: 70%;
+  align-items: right;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  margin-left: 120px;
+}
+@media (max-width: 988px) {
+  header .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+  }
+  header .wrapper .right {
+    width: 100%;
+    min-height: 100%;
+  }
+  header .wrapper .right img {
+    margin: 0 0 0 80px;
+  }
+  header .wrapper .left {
+    text-align: left;
+    width: 100%;
+    padding: 30px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header .wrapper .left h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+  header .wrapper .left a {
+    text-align: center;
+  }
+}
+
+/* Main Styling */
+
+main {
+  padding: 60px 5%;
+  background: hsl(0, 0%, 98%);
+  margin-top: -130px;
+}
+main .text h1 {
+  font-size: 45px;
+  font-weight: 300;
+  color: hsl(233, 26%, 24%);
+}
+main .text p {
+  margin-top: 30px;
+  width: 50%;
+  line-height: 23px;
+  color: hsl(233, 8%, 62%);
+}
+main .wrapper {
+  margin-top: 80px;
+  display: flex;
+}
+main .wrapper .box {
+  width: 25%;
+  padding: 20px 30px;
+}
+main .wrapper .box h3 {
+  margin-top: 10px;
+  color: #444;
+  font-weight: 300;
+}
+main .wrapper .box p {
+  margin-top: 15px;
+  color: hsl(233, 8%, 62%);
+}
+@media (max-width: 1190px) {
+  main {
+    margin-top: -30px;
+  }
+  main .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 1013px) {
+  main .wrapper .box {
+    padding: 20px 15px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  main .wrapper {
+    display: block;
+  }
+  main .wrapper .box {
+    width: 100%;
+  }
+}
+
+/* First-Section-Start */
+
+.first {
+  padding: 30px 5%;
+}
+.first .heading h2 {
+  margin-top: 30px;
+  font-weight: 300;
+  color: hsl(233, 26%, 24%);
+  font-size: 42px;
+}
+.first .wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.first .wrapper .box p {
+  margin-top: 10px;
+  color: #444;
+}
+.first .wrapper .box h3 {
+  font-weight: 300;
+  margin-top: 10px;
+}
+.first .wrapper img {
+  width: 100%;
+  border-radius: 5px;
+}
+.first .wrapper .box {
+  width: 23%;
+}
+@media (max-width: 628px) {
+  .first .wrapper {
+    display: block;
+    text-align: center;
+  }
+  .first .wrapper .box {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+}
+
+/* Footer Styling */
+footer {
+  padding: 100px 3%;
+  width: 100%;
+  background: #ccc;
+}
+footer .wrapper {
+  display: flex;
+}
+footer .wrapper .col {
+  width: 25%;
+}
+footer .wrapper .col li {
+  margin: 20px 0;
+  margin-top: 0;
+}
+footer .wrapper .col a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+}
+footer .wrapper .col a:hover {
+  color: hsl(136, 65%, 51%);
+  transition: 0.4s;
+}
+footer .wrapper .col button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+}
+footer .wrapper .col button:hover {
+  background: linear-gradient(to right, hsl(136, 65%, 80%), hsl(192, 70%, 70%));
+  transition: 0.4s;
+}
+@media (max-width: 760px) {
+  footer {
+    padding: 100px 1%;
+  }
+}
+@media (max-width: 600px) {
+  footer .wrapper {
+    display: block;
+    text-align: center;
+  }
+  footer .wrapper .col {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
